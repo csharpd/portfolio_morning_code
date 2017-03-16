@@ -1,0 +1,123 @@
+.header {
+    background-color: deepskyblue;
+} 
+
+ .navigation {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.mobile-menu {
+    display:none;
+    padding:1.3em;
+}
+
+.burger-btn {
+    position: absolute;
+    right:20px;
+    top:10px;
+    cursor:pointer;
+    height:20px;
+}
+
+.burger-btn span {
+    display:block;
+    width:19px;
+    height: 3px;
+    background:rgb(244,244,244);
+    z-index:99;
+    margin: 4px 0;
+}
+
+.expand {
+    display: block !important;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+
+a:hover {
+    background: skyblue;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.project {
+    background-color: tomato;
+    color: white;
+    height: 500px;
+    width: 47%;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+#image-1 {
+    background-image: url('assets/yellowangry.png'); 
+}
+
+#image-2 {
+    background-image: url('assets/yellowangry.png'); 
+    background-size: 100%;
+}
+
+@media (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+
+    .content {
+        flex-flow: column wrap;
+    }
+
+    .project {
+        width: 100%;
+        margin: 5px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .project:first-of-type {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width:500px) {
+    .navigation {
+        flex-flow: column wrap;
+    }
+
+    .navigation a {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+
+      .navigation li:last-of-type a {
+          border-bottom: none
+      }
+
+    .mobile-menu {
+        display: inline-block;
+    }
+
+    .responsive-menu{
+        display: none;
+    }
+
+}
